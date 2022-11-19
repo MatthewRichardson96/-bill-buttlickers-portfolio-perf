@@ -1,11 +1,4 @@
 function onClickNavHandler() {
-	let start;
-	setTimeout((_) => performance.now() - start, 0);
-	let p = Promise.resolve(1);
-	for (let i = 150000; i; i--) {
-		p = p.then((_) => 1);
-	}
-	start = performance.now();
 	for (const link of document.querySelectorAll("nav li a")) {
 		link.addEventListener("click", function (event) {
 			document
@@ -27,5 +20,3 @@ function onClickNavHandler() {
 	}
 }
 onClickNavHandler();
-const delay = (t) => new Promise((resolve) => setTimeout(resolve, t));
-delay(14000);
